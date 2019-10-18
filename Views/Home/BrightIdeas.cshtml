@@ -1,0 +1,32 @@
+@model BrightIdeasPageModel
+    <div class="fixedTopRight"><a href="Logout">Logout</a></div> 
+<div style="width: 800px; background-color: whitesmoke; padding:5px;">
+
+<div>
+ <h1>Hello @Model.CurrentUser.UserName!</h1>
+<form action="AddMessage" method="post">
+    <textarea name="MessageContent" id="" style="width:80%;" cols="120" rows="3"></textarea>
+    <input type="hidden" name="UserId" value="@Model.CurrentUser.UserId">
+    <input class="btn btn-info fixedBottomRight"  type="submit" value="  Add Idea!   ">
+</form>
+</div>
+<div style="width:95%;">
+    <div class="divider"></div>
+    @foreach (Message msg in @Model.ListOfMessages)
+      {
+        <div> 
+            <div> <a href="/Users/@msg.MessageCreator.UserId">@msg.MessageCreator.UserName</a> says: </div>
+            <div class="messageText">@msg.MessageContent </div>
+            <a class="indented like" href="AddLike">  Like  </a> 
+            <a class="underlined" href="/BrightIdeas/@msg.MessageId"> @msg.ChildComments.Count people</a> like this.
+                  <form action="AddComment" method="post">
+                        <input type="hidden" name="CommentContent" value="like">
+                        <input type="hidden" name="UserId" value="@Model.CurrentUser.UserId">
+                        <input type="hidden" name="MessageId" value="@msg.MessageId">
+                        <input type="submit" value="Like">
+                  </form> 
+        </div>
+         }
+    </div>
+</div>
+</div>
