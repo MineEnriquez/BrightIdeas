@@ -139,3 +139,9 @@ font-weight: 600;
     vertical-align: top;
     padding: 5px;
   }
+  .line{
+    width: 500px;
+    height: 5px;
+    border-bottom: 2px solid gray;
+    padding: 5px;
+  }

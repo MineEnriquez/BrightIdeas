@@ -31,3 +31,4 @@ C:\Git\BOOTCAMP\CodingDojo\Bootcamp_secondstack\Exam\BrightIdeas\obj\Debug\netco
 C:\Git\BOOTCAMP\CodingDojo\Bootcamp_secondstack\Exam\BrightIdeas\obj\Debug\netcoreapp2.2\BrightIdeas.pdb
 C:\Git\BOOTCAMP\CodingDojo\Bootcamp_secondstack\Exam\BrightIdeas\obj\Debug\netcoreapp2.2\BrightIdeas.csproj.CopyComplete
 C:\Git\BOOTCAMP\CodingDojo\Bootcamp_secondstack\Exam\BrightIdeas\obj\Debug\netcoreapp2.2\Razor\Views\Home\BrightIdeas.g.cshtml.cs
+C:\Git\BOOTCAMP\CodingDojo\Bootcamp_secondstack\Exam\BrightIdeas\obj\Debug\netcoreapp2.2\Razor\Views\Home\UserIdeas.g.cshtml.cs

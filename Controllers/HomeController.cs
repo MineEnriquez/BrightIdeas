@@ -203,6 +203,14 @@ namespace BrightIdeas.Controllers
         return Redirect("BrightIdeas");
     }
 
+    [Route("Users/{_userId}")]
+    [HttpGet]
+    public IActionResult DisplayUserActivity(int _userId)
+    {
+        User theUser = GetActivityForUser(_userId);
+        return View("UserIdeas", theUser);
+    }
+
     public List<Message> GetAllMessages(){
         List<Message> thelist = dbContext.Messages
         .OrderByDescending(m => m.CreatedAt)
@@ -211,6 +219,15 @@ namespace BrightIdeas.Controllers
         .Include(u => u.MessageCreator)
         .ToList();
         return thelist;
+    }
+        public User GetActivityForUser(int _userid){
+
+        User theActivity = dbContext.Users
+        .Include(u => u.MyLikes)
+        .Include(u => u.MyMessages)
+        .FirstOrDefault(p => p.UserId== _userid);
+
+        return theActivity;
     }
         public User  GetCurrentUser(){
          int? _userId = HttpContext.Session.GetInt32("UserId");

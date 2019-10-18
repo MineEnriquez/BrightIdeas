@@ -1,0 +1,10 @@
+@model User
+    <div class="fixedTopRight"><a class="padded" href="/BrightIdeas">BrightIdeas</a><a class="padded" href="Logout">Logout</a></div> 
+<div class="wrapper">
+    <h4 class="padded">Name:  @Model.UserName</h4>
+    <h4 class="padded">Alias:  @Model.Alias</h4>
+    <h4 class="padded">Email:   @Model.Email</h4>
+    <div class="line"></div>
+    <h4 class="padded">Total Number Of Posts:  @Model.MyMessages.Count</h4>
+    <h4 class="padded">Total Number of Likes:  @Model.MyLikes.Count</h4>
+</div>
