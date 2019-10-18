@@ -7,7 +7,7 @@ namespace BrightIdeas.Models
     {
         public Message OneMessage { get; set; }
         public List<Message> ListOfMessages { get; set; }
-        public Comment OneComment {get; set;}
+        public Like OneLike {get; set;}
         public User CurrentUser {get; set;}
     }
 }

@@ -2958,7 +2958,7 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": null,
+  "RootNamespace": "BrightIdeas",
   "Documents": [
     {
       "FilePath": "Views\\Shared\\Error.cshtml",

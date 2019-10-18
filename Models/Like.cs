@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace BrightIdeas.Models
 {
-    public class Comment
+    public class Like
     {
-        public int CommentId { get; set; }
+        public int LikeId { get; set; }
 
         [Required]
         [MinLength(4)]
-        [Display(Name = "Comment:")]        
-        public string CommentContent { get; set; }
+        [Display(Name = "Like:")]        
+        public string LikeContent { get; set; }
         public int UserId{get; set;}
         public int MessageId {get; set;}
 
         //Navigation properties
 
-        public User CommentCreator { get; set; }
+        public User LikeCreator { get; set; }
         public Message ParentMessage { get; set; }
     }
 }

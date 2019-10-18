@@ -186,28 +186,28 @@ namespace BrightIdeas.Controllers
         return Redirect("BrightIdeas");
 
     }
-    //AddComment
-    [Route("AddComment")]
+    //AddLike
+    [Route("AddLikeOld")]
     [HttpPost]
-    public IActionResult AddComment(int UserId, string CommentContent, int MessageId)
+    public IActionResult AddLikeOld(int UserId, string LikeContent, int MessageId)
     {
-        Comment _cmt = new Comment();
-        if(UserId>0 && CommentContent!= null && MessageId>0 ){
+        Like _cmt = new Like();
+        if(UserId>0 && LikeContent!= null && MessageId>0 ){
 
         _cmt.UserId = UserId;
-        _cmt.CommentContent = CommentContent;
+        _cmt.LikeContent = LikeContent;
         _cmt.MessageId = MessageId;
-        dbContext.Comments.Add(_cmt);
+        dbContext.Likes.Add(_cmt);
         dbContext.SaveChanges();
         }
         return Redirect("BrightIdeas");
     }
-    
+
     public List<Message> GetAllMessages(){
         List<Message> thelist = dbContext.Messages
         .OrderByDescending(m => m.CreatedAt)
-        .Include(c => c.ChildComments)
-        .ThenInclude(u => u.CommentCreator)
+        .Include(c => c.ChildLikes)
+        .ThenInclude(u => u.LikeCreator)
         .Include(u => u.MessageCreator)
         .ToList();
         return thelist;

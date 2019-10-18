@@ -18,7 +18,7 @@ namespace BrightIdeas.Models
         
         //navigation properties:
         public User MessageCreator { get; set; }
-        public List<Comment> ChildComments { get; set; }
+        public List<Like> ChildLikes { get; set; }
     }
 }
 

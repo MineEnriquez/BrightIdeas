@@ -101,11 +101,12 @@ font-weight: 600;
     }
   .messageText{
     margin-left: 20px;
+    width: 500px;
     background-color: white;
     border: solid 3px lightgrey;
     padding: 10px;;
   }
-  .commentText{
+  .LikeText{
     margin-left: 40px;
     background-color: white;
   }
@@ -116,9 +117,6 @@ font-weight: 600;
     width: 150px;
     height: 50px;
   }
-  form{
-    padding: 20px;
-  }
   .indented{
     margin-left:30px;
   }
@@ -128,4 +126,16 @@ font-weight: 600;
   }
   .underlined{
     text-decoration: underline;
+  }
+  .sideByside
+  {
+    display: inline-block;
+  }
+  .padded{
+    padding: 5px;
+  }
+  .poster{
+    width: 150px;
+    vertical-align: top;
+    padding: 5px;
   }

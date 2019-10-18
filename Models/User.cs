@@ -47,6 +47,6 @@ public class User
 
         //navigation properties
         public List<Message> MyMessages { get; set; }
-        public List<Comment> MyComments {get; set;}
+        public List<Like> MyLikes {get; set;}
     }
 }
